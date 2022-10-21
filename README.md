@@ -1,11 +1,15 @@
 # Visualization and Modeling of Sales Prices
 Perform data visualization on Features and Regression Models on Future Sale Prices of Items
-## Santos A. Romero
+
+**Santos A. Romero**
+
 # Business Problem
 Predicting future sales on specific items for supermarkets and grocery stores.
+
 # Data
 Big Mart Sales Predictions data
 https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii/
+
 # Methods
 For Predictive Model
 - Checked for duplicates
@@ -21,5 +25,19 @@ For the Visualization /Presentationfile
 > - Dropped Numerical Column as was not needed for Visualizations
 - Checked for inconsistencies in data.
 > - Renamed certain values so organize data
-# Results
-![sample image](project1_sample_image.png)
+
+# Model
+For the predictive model I recommend a `Linear Regression` model.
+
+My reasoning resides on how it performed against a Random Tree Regression Model.
+The Random Tree Regression model kept overfitting even after I made adjustments by a significant margin.
+The closer I tried make the R2 scores for the Training data and Test data, the worse the score had to get.
+On the heatmap in my Predictions file you can see there is very little correlation with any of the numerical columns
+The categorical columns don't assist much in putting it all together, ultimately just creating too much noise for the 
+Tree Regression Model to effectively work with other forms of data.
+
+The linear regression model managed to keep the R2 scores close together and overall higher than when the same was 
+accomplished with the Tree Regression Model.
+
+## Contact information
+If there are any more questions or concerns regarding my data, feel free to contact me: saromerg@gmail.com
