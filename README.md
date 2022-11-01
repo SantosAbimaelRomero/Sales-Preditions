@@ -14,17 +14,28 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
 For Predictive Model
 - Checked for duplicates
 - Checked for missing values
-> - Used SimplyImputer for numerical values
+> - Used SimpleImputer for numerical values
 > - Found patterns to manually impute values for categorical columns
 - Removed Certain Columns
 > Certain columns were not useful and would only clutter my predictive model with noise.
 For the Visualization /Presentationfile
-- Checed for duplicates
+- Checked for duplicates
 - Checked for missing values
 > - Found patterns to manually impute values for categorical columns
 > - Dropped Numerical Column as was not needed for Visualizations
 - Checked for inconsistencies in data.
 > - Renamed certain values so organize data
+
+# Visualizations
+I compared multiple features for correlation and patterns with total outlet sales.
+
+![Distribution of Sales by Outlet Size](https://user-images.githubusercontent.com/112634963/199135169-b4dc908f-2737-4980-9fcb-86df17a47955.png)
+
+![Distribution of Sales by Item Fat Content](https://user-images.githubusercontent.com/112634963/199135215-6c09dbd6-aea5-40a5-bea8-f69ae8e6f29a.png)
+
+Most features I visualized with total outlet sales display the same pattern of a high count of items making relatively low total sales, with fewer
+and fewer items making significant sales individually.
+
 
 # Model
 For the predictive model I recommend a `Linear Regression` model.
