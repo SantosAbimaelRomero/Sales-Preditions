@@ -76,5 +76,18 @@ Tree Regression Model to effectively work with other forms of data.
 The linear regression model managed to keep the R2 scores close together and overall higher than when the same was 
 accomplished with the Tree Regression Model.
 
+# Conclusions Based on Visuals
+
+Small outlets have the greatest selection of items, despite any individual item producing less sales than in medium and high outlets, it still produces the greatest amount of total sales overall simply out of the sheer volume of items. (₹8,779,049 in sales)
+
+---
+Medium outlets have the second largest selection of items, it also has more expensive items and items that can produce greater total sales individually than items in small outlets. It comes as a close second making a about ₹1,500,000 less than small outlets. (₹4,035,793 in sales)
+
+---
+High outlets have the smallest selection of items and produces the smallest total sales by a large margin than small and medium outlets. Despite have high value items than can consistenly make more sales individually than the other two outlet sizes, it produces a notable ~₹5,000,000 less in total sales than medium outlets and ~₹6,800,000 less than small outlets. (₹2,142,664 in sales)
+
+---
+Just based on what I found through my visualizations, what makes the most sales are the small outlets due to their massive variety of items. I also saw that despite there being much more low fat items, low fat items still had about the same amount of sales as regular fat items. So in order to get the greatest amount of sales an outlet must have a large variety of relatively low cost items while focusing more on regular fat items as they get the most sales. While if any low fat items are to be sold, they would need much more quantity and variety to get about the same amount of sales as regular fat items sold with lesser variety and lesser quantity.
+
 ## Contact information
 If there are any more questions or concerns regarding my data, feel free to contact me: saromerg@gmail.com
