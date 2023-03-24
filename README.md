@@ -6,6 +6,8 @@ Perform data visualization on Features and Regression Models on Future Sale Pric
 # Business Problem
 Predicting future sales on specific items for supermarkets and grocery stores.
 
+Trying to find which items sold more than others and why.
+
 # Data
 Big Mart Sales Predictions data
 https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii/
