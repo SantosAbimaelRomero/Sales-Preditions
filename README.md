@@ -11,20 +11,43 @@ Big Mart Sales Predictions data
 https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii/
 
 # Methods
+For the Visualization / Presentation file
+
+## Checked for duplicates
+- None Found
+
+## Checked for missing values
+- Only two columns had missing values; Outlet_Size and Item_Weight
+
+### Outlet_Size
+- Found patterns between "Outlet_Size"/"Outlet_Type"/"Outlet_Location_Type" columns detailed below which allowed me to accurately fill in missing values for the "Outlet_Size" column
+>SMALL OUTLET SIZE
+>- Tier 2s are always small, grocery stores are always small
+>- Tier 1s are mostly small, Supermarket Type 1s are mostly small
+>
+>MEDIUM OUTLET SIZE
+>- Tier 3s are mostly medium, Tier 1s are less likely but can be medium
+>- Supermarket Type 2 & 3 are only medium, Type 1s are less likely but can be medium
+>
+>HIGH OUTLET SIZE
+>- Tier 3s are the only highs
+>- Supermarket Type 1s are the only highs
+
+### Item_Weight
+> The Item_Weight column is missing slightly over ~17% of the data if I remove the columns with missing values I'd still have ~83% of the data with accurate values. Given the business problem (trying to predict future sales of specific items) I will opt to remove the rows with missing values in the Item_Weight column. Given that weight can influence price and amount purchased by customers in a grocery store setting, it is best to keep these values accurate and not impute estimations.
+
+## Checked for inconsistencies in data.
+- Standardized nomenclature to better organize data. Only necessary in Item_Fat_Content column.
+
 For Predictive Model
 - Checked for duplicates
+ > None where found
 - Checked for missing values
 > - Used SimpleImputer for numerical values
 > - Found patterns to manually impute values for categorical columns
 - Removed Certain Columns
 > Certain columns were not useful and would only clutter my predictive model with noise.
-For the Visualization /Presentationfile
-- Checked for duplicates
-- Checked for missing values
-> - Found patterns to manually impute values for categorical columns
-> - Dropped Numerical Column as was not needed for Visualizations
-- Checked for inconsistencies in data.
-> - Renamed certain values so organize data
+
 
 # Visualizations
 I compared multiple features for correlation and patterns with total outlet sales.
