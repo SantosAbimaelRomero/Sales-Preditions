@@ -10,8 +10,7 @@ Predicting future sales on specific items for supermarkets and grocery stores.
 Big Mart Sales Predictions data
 https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii/
 
-# Methods
-For the Visualization / Presentation file
+# Methods For the Visualization / Presentation
 
 ## Checked for duplicates
 - None Found
@@ -34,16 +33,18 @@ For the Visualization / Presentation file
 >- Supermarket Type 1s are the only highs
 
 ### Item_Weight
-> The Item_Weight column is missing slightly over ~17% of the data if I remove the columns with missing values I'd still have ~83% of the data with accurate values. Given the business problem (trying to predict future sales of specific items) I will opt to remove the rows with missing values in the Item_Weight column. Given that weight can influence price and amount purchased by customers in a grocery store setting, it is best to keep these values accurate and not impute estimations.
+The Item_Weight column is missing slightly over ~17% of the data if I remove the columns with missing values I'd still have ~83% of the data with accurate values. Given the business problem (trying to predict future sales of specific items) I will opt to remove the rows with missing values in the Item_Weight column. Given that weight can influence price and amount purchased by customers in a grocery store setting, it is best to keep these values accurate and not impute estimations.
 
 ## Checked for inconsistencies in data.
 - Standardized nomenclature to better organize data. Only necessary in Item_Fat_Content column.
 
-For Predictive Model
-- Checked for duplicates
- > None where found
-- Checked for missing values
-> - Used SimpleImputer for numerical values
+# Methods For Predictive Model
+Mostly Similar as I did for the presentation and visuals. (In Progress)
+## Checked for duplicates
+ None where found
+
+## Checked for missing values
+> - Used SimpleImputer for numerical values; instead of removing rows.
 > - Found patterns to manually impute values for categorical columns
 - Removed Certain Columns
 > Certain columns were not useful and would only clutter my predictive model with noise.
