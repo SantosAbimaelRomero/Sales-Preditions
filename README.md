@@ -40,41 +40,16 @@ The Item_Weight column is missing slightly over ~17% of the data if I remove the
 ## Checked for inconsistencies in data.
 - Standardized nomenclature to better organize data. Only necessary in Item_Fat_Content column.
 
-# Methods For Predictive Model
-Mostly Similar as I did for the presentation and visuals. (In Progress)
-## Checked for duplicates
- None where found
-
-## Checked for missing values
-> - Used SimpleImputer for numerical values; instead of removing rows.
-> - Found patterns to manually impute values for categorical columns
-- Removed Certain Columns
-> Certain columns were not useful and would only clutter my predictive model with noise.
-
-
 # Visualizations
-I compared multiple features for correlation and patterns with total outlet sales.
+I compared multiple features for correlation and patterns with total outlet sales. Below is a comparison between items with low fat content vs regular fat content across all outlet types.
 
-![Distribution of Sales by Outlet Size](https://user-images.githubusercontent.com/112634963/199135169-b4dc908f-2737-4980-9fcb-86df17a47955.png)
-
-![Distribution of Sales by Item Fat Content](https://user-images.githubusercontent.com/112634963/199135215-6c09dbd6-aea5-40a5-bea8-f69ae8e6f29a.png)
-
-Most features I visualized with total outlet sales display the same pattern of a high count of items making relatively low total sales, with fewer
-and fewer items making significant sales individually.
+![Low Fat Content Sales](https://user-images.githubusercontent.com/112634963/228052570-9bca69c7-4c12-4909-a689-7a30a6d7a29d.png)
+![Regular Fat Content sales](https://user-images.githubusercontent.com/112634963/228052587-d686f86b-1793-4b6f-b140-29c49fb2a40e.png)
 
 
-# Model
-For the predictive model I recommend a `Linear Regression` model.
+Here we see a similar trend between low fat items and regular fat items and how much in sales they achieved across all grocery stores and supermarkets. Very few items made large amounts of sales individually.
+Most items made from ₹0 to ₹4,000 but regular fat items do have a slightly greater median as well as a much greater top end where the highest selling low fat items peak at about ₹8,000 but for regular fat items it peaks at around ₹10,000.
 
-My reasoning resides on how it performed against a Random Tree Regression Model.
-The Random Tree Regression model kept overfitting even after I made adjustments by a significant margin.
-The closer I tried make the R2 scores for the Training data and Test data, the worse the score had to get.
-On the heatmap in my Predictions file you can see there is very little correlation with any of the numerical columns
-The categorical columns don't assist much in putting it all together, ultimately just creating too much noise for the 
-Tree Regression Model to effectively work with other forms of data.
-
-The linear regression model managed to keep the R2 scores close together and overall higher than when the same was 
-accomplished with the Tree Regression Model.
 
 # Conclusions Based on Visuals
 
@@ -88,6 +63,21 @@ High outlets have the smallest selection of items and produces the smallest tota
 
 ---
 Just based on what I found through my visualizations, what makes the most sales are the small outlets due to their massive variety of items. I also saw that despite there being much more low fat items, low fat items still had about the same amount of sales as regular fat items. So in order to get the greatest amount of sales an outlet must have a large variety of relatively low cost items while focusing more on regular fat items as they get the most sales. While if any low fat items are to be sold, they would need much more quantity and variety to get about the same amount of sales as regular fat items sold with lesser variety and lesser quantity.
+
+# For Prediction Model
+
+### Model
+For the predictive model I recommend my `Linear Regression` model.
+
+My reasoning resides on how it performed against a Random Tree Regression Model.
+The Random Tree Regression model kept overfitting even after I made adjustments by a significant margin.
+The closer I tried make the R2 scores for the Training data and Test data, the worse the score had to get.
+On the heatmap in my Predictions file you can see there is very little correlation with any of the numerical columns
+The categorical columns don't assist much in putting it all together, ultimately just creating too much noise for the 
+Tree Regression Model to effectively work with other forms of data.
+
+The linear regression model managed to keep the R2 scores close together and overall higher than when the same was 
+accomplished with the Tree Regression Model.
 
 ## Contact information
 If there are any more questions or concerns regarding my data, feel free to contact me: saromerg@gmail.com
