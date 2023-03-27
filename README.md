@@ -48,7 +48,7 @@ I compared multiple features for correlation and patterns with total outlet sale
 
 
 Here we see a similar trend between low fat items and regular fat items and how much in sales they achieved across all grocery stores and supermarkets. Very few items made large amounts of sales individually.
-Most items made from ₹0 to ₹4,000 but regular fat items do have a slightly greater median as well as a much greater top end where the highest selling low fat items peak at about ₹8,000 but for regular fat items it peaks at around ₹10,000.
+Most items made from ₹0 to ₹4,000 but regular fat items do have a slightly greater median as well as a much greater top end where the highest selling low fat items peak at about ₹9,000 but for regular fat items it peaks at around ₹10,000.
 
 
 # Conclusions Based on Visuals
