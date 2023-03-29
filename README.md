@@ -90,7 +90,7 @@ Next I tested a `Random Forest Regression` Model.
 >The Random Forest Regression model kept overfitting even after I made large adjustments. The closer I tried make the R2 scores for the Training data and Test data, the worse the score became. On the heatmap below, you can see there is very little correlation with any of the numerical columns. The categorical columns don't assist much in putting it all together, ultimately just creating too much noise for the Tree Regression Model to effectively work with other forms of data after fitting with the training data.
 ![Numeric Column Heatmap](https://user-images.githubusercontent.com/112634963/228395714-4f9578d6-0925-4b78-a752-2aed4138918e.png)
 
-I tested the model with reduced features to those only with reasonable correlations but that only made the model worse.
+>I tested the model with reduced features to those only with reasonable correlations but that only made the model worse.
 
 ## Contact information
 If there are any more questions or concerns regarding my data, feel free to contact me: saromerg@gmail.com
