@@ -22,15 +22,15 @@ https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii
 
 ### Outlet_Size
 - Found patterns between "Outlet_Size"/"Outlet_Type"/"Outlet_Location_Type" columns detailed below which allowed me to accurately fill in missing values for the "Outlet_Size" column
->SMALL OUTLET SIZE
+>**SMALL OUTLET SIZE**
 >- Tier 2s are always small, grocery stores are always small
 >- Tier 1s are mostly small, Supermarket Type 1s are mostly small
 >
->MEDIUM OUTLET SIZE
+>**MEDIUM OUTLET SIZE**
 >- Tier 3s are mostly medium, Tier 1s are less likely but can be medium
 >- Supermarket Type 2 & 3 are only medium, Type 1s are less likely but can be medium
 >
->HIGH OUTLET SIZE
+>**HIGH OUTLET SIZE**
 >- Tier 3s are the only highs
 >- Supermarket Type 1s are the only highs
 
@@ -66,18 +66,31 @@ Just based on what I found through my visualizations, what makes the most sales 
 
 # For Prediction Model
 
-### Model
-For the predictive model I recommend my `Linear Regression` model.
+## Data Preparation
+### Checked for duplicates
+- None Found
 
-My reasoning resides on how it performed against a Random Tree Regression Model.
-The Random Tree Regression model kept overfitting even after I made adjustments by a significant margin.
-The closer I tried make the R2 scores for the Training data and Test data, the worse the score had to get.
-On the heatmap in my Predictions file you can see there is very little correlation with any of the numerical columns
-The categorical columns don't assist much in putting it all together, ultimately just creating too much noise for the 
-Tree Regression Model to effectively work with other forms of data.
+### Checked for missing values
+- Only two columns had missing values; Outlet_Size and Item_Weight
+- I filled in the Outlet_Size feature missing values the same way as for the visualizations.
+- I also removed the rows missing values in the Item_Weight feature exactly as I did for the visualizations.
 
-The linear regression model managed to keep the R2 scores close together and overall higher than when the same was 
-accomplished with the Tree Regression Model.
+## Model
+I first tested a `Linear Regression` model.
+>**R2**
+>
+>This model can only account for little more than 56% of the data. Which is not a good sign for a useful model as it only accounts for little more than half the data.
+>
+>**MAE / RMSE**
+>
+>Looking at the MAE and RMSE, they are about ₹200 to ₹300 apart. This means there aren't many large errors for RMSE to punish, but we still have an error margin of ~₹800 to ~₹1,100 from our models predictions to the actual reported total outlet sales of any given item. Which in the context of the " Item_Outlet_Sales " column, which is our target vector, that is a very large amount. In some cases, the model is potentially doubling the predicting sales of an item. So, despite the MAE and RMSE being seemingly close together, the actual values they hold are far too large for me to recommend this model.
+
+Next I tested a `Random Forest Regression` Model.
+
+>The Random Forest Regression model kept overfitting even after I made large adjustments. The closer I tried make the R2 scores for the Training data and Test data, the worse the score became. On the heatmap below, you can see there is very little correlation with any of the numerical columns. The categorical columns don't assist much in putting it all together, ultimately just creating too much noise for the Tree Regression Model to effectively work with other forms of data after fitting with the training data.
+![Numeric Column Heatmap](https://user-images.githubusercontent.com/112634963/228395714-4f9578d6-0925-4b78-a752-2aed4138918e.png)
+
+
 
 ## Contact information
 If there are any more questions or concerns regarding my data, feel free to contact me: saromerg@gmail.com
